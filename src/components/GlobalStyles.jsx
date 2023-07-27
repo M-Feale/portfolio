@@ -40,7 +40,12 @@ export default createGlobalStyle`
     }
     body {
         line-height: 1;
+        /* -ms-overflow-style: none;  /* IE and Edge */
+        /* scrollbar-width: none;  Firefox */ 
     }
+    /* body::-webkit-scrollbar {
+    display: none;
+    } */
     ol, ul {
         list-style: none;
     }
