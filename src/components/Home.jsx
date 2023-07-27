@@ -7,7 +7,7 @@ const Home = () => {
 				<TextDiv>
 					<Call>Making strides in the Web Dev world</Call>
 					<Answer>One project at a time</Answer>
-          <Connection>Let's connect!</Connection>
+					<Connection>Let's connect!</Connection>
 				</TextDiv>
 			</MainContainer>
 		</>
@@ -21,9 +21,9 @@ const MainContainer = styled.div`
 	//I need to substract the two. I might need to change it IF I change my component
 	//structure. Calling Banner inside every Component or not...
 
-	background-color: #232424; 
-  //color choices: almost black in the same hue as green #2d3332; #232424;  
-  // almost black but in pink hue #4d4847 #272524
+	background-color: var(--secondary-color);
+	//color choices: almost black in the same hue as green #2d3332; #232424;
+	// almost black but in pink hue #4d4847 #272524
 
 	position: relative;
 	display: flex;
@@ -53,18 +53,18 @@ export const Call = styled.p`
 	font-family: var(--heading-font-family);
 	/* font-family: 'JetBrains Mono', monospace; */
 	/* font-family: 'Archivo', sans-serif; */
-  /* font-family: 'Archivo Black', sans-serif;  */
-  /* font-family: 'Syne', sans-serif;  */
+	/* font-family: 'Archivo Black', sans-serif;  */
+	/* font-family: 'Syne', sans-serif;  */
 `;
 
 export const Answer = styled.p`
 	font-size: 35px;
+	color: var(--tertiary-color);
+	font-family: var(--copy-font-family);
 	left: 90%;
 	width: 200px;
 	position: relative;
 	top: 20px;
-	color: var(--tertiary-color);
-  font-family: var(--copy-font-family);
 `;
 
 const Connection = styled.p`
@@ -74,7 +74,7 @@ const Connection = styled.p`
 	position: relative;
 	top: 20px;
 	color: var(--tertiary-color);
-  font-family: var(--link-font-family);
+	font-family: var(--link-font-family);
 `;
 
 // const KikiSleepy = styled.div`
@@ -154,6 +154,5 @@ const Connection = styled.p`
 //   color: #b93d47;
 //   color: #e06168;
 // `;
-
 
 export default Home;
