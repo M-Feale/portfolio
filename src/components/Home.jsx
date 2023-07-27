@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import Banner from "./Banner";
 
 const Home = () => {
 	return (
@@ -43,15 +42,15 @@ const TextDiv = styled.div`
 	justify-content: center;
 	width: 200px;
 	padding: 0 50px;
-	background-color: #183d38;
+	background-color: var(--primary-color);
 	margin: 0 auto;
 `;
 
 export const Call = styled.p`
 	font-size: 70px;
-	font-weight: bold;
-	color: #f3b9ac;
-	font-family: "Space Grotesk", sans-serif;
+	font-weight: var(--heading-font-weight);
+	color: var(--tertiary-color);
+	font-family: var(--heading-font-family);
 	/* font-family: 'JetBrains Mono', monospace; */
 	/* font-family: 'Archivo', sans-serif; */
   /* font-family: 'Archivo Black', sans-serif;  */
@@ -64,10 +63,8 @@ export const Answer = styled.p`
 	width: 200px;
 	position: relative;
 	top: 20px;
-	color: #f3b9ac;
-	/* font-weight: bold; */
-  font-family: 'Archivo', sans-serif;
-  font-weight: 100;
+	color: var(--tertiary-color);
+  font-family: var(--copy-font-family);
 `;
 
 const Connection = styled.p`
@@ -76,9 +73,8 @@ const Connection = styled.p`
 	width: 200px;
 	position: relative;
 	top: 20px;
-	color: #f3b9ac;
-font-family: 'JetBrains Mono', monospace;
-  font-weight: 100;
+	color: var(--tertiary-color);
+  font-family: var(--link-font-family);
 `;
 
 // const KikiSleepy = styled.div`

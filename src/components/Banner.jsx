@@ -8,7 +8,7 @@ const Banner = () => {
         <MainContainer>
             <BrandHeading>Marjolaine Feale</BrandHeading>
             <NavBar className="nav-buttons">
-                <NavButtons>Home</NavButtons>
+                <NavButtons to={"/"} >Home</NavButtons>
                 <NavButtons>About</NavButtons>
                 <NavButtons to={"/projects"} >Projects</NavButtons>
                 <NavButtons>Contact</NavButtons>
@@ -22,33 +22,32 @@ const MainContainer = styled.div`
     height: 15vh;
     width: 100vw;
     max-width: 100%;
-    background-color: #183d38; 
+    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 1;
-    color: #f3b9ac;
-    font-weight: bold;
+    color: var(--tertiary-color);
     padding: 0 10px;
 `;
 
 const NavBar = styled.div`
     display: flex;
-    /* margin: 0 10px 0 0; */
 `;
 
 const BrandHeading = styled.p`
     font-size: 30px;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
 `;
 
-const NavButtons = styled(Link)` // change them to button and navlinks later but now, just for the mock-up, let's makes them p tags
+const NavButtons = styled(Link)` 
     font-size: 20px;
     margin: 0 5px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--link-font-family);
     text-decoration: none;
-    color: #f3b9ac;
+    color: var(--tertiary-color);
 `;
 
 export default Banner;

@@ -3,7 +3,16 @@ import { createGlobalStyle } from "styled-components";
 // export the breakpoints for tablet and cellphone
 
 export default createGlobalStyle`
-    
+    :root{
+        --primary-color: #183d38;
+        --secondary-color: #232424;
+        --tertiary-color: #f3b9ac;
+        --heading-font-family: "Space Grotesk", sans-serif;
+        --copy-font-family: 'Archivo', sans-serif;
+        --link-font-family: 'JetBrains Mono', monospace;
+        --heading-font-weight: bold;
+    }
+
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
