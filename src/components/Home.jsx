@@ -5,14 +5,20 @@ const Home = () => {
 		<>
 			<MainContainer>
 				<TextDiv>
-					<Call>Making strides in the Web Dev world</Call>
+					<Call>Making strides in the web development world...</Call>
 					<Answer>One project at a time</Answer>
-					<Connection>Let's connect!</Connection>
+					<Connection>Let's connect <LeftSpan>--{">"}</LeftSpan></Connection>
 				</TextDiv>
 			</MainContainer>
 		</>
 	);
 };
+
+const LeftSpan = styled.span`
+  text-align: end;
+  position: relative;
+  left: 8%;
+`;
 
 const MainContainer = styled.div`
 	width: 100vw;
@@ -51,6 +57,7 @@ export const Call = styled.p`
 	font-weight: var(--heading-font-weight);
 	color: var(--tertiary-color);
 	font-family: var(--heading-font-family);
+  text-align: end;
 	/* font-family: 'JetBrains Mono', monospace; */
 	/* font-family: 'Archivo', sans-serif; */
 	/* font-family: 'Archivo Black', sans-serif;  */
@@ -61,10 +68,11 @@ export const Answer = styled.p`
 	font-size: 35px;
 	color: var(--tertiary-color);
 	font-family: var(--copy-font-family);
-	left: 90%;
+	left: -60%;
 	width: 200px;
 	position: relative;
-	top: 20px;
+	/* top: 10px; */
+  text-align: start;
 `;
 
 const Connection = styled.p`
@@ -72,9 +80,12 @@ const Connection = styled.p`
 	left: 90%;
 	width: 200px;
 	position: relative;
-	top: 20px;
-	color: var(--tertiary-color);
+	top: -20px;
+	color: var(--secondary-color);
+  background-color: var(--tertiary-color);
 	font-family: var(--link-font-family);
+  padding: 5px;
+  text-align: center;
 `;
 
 // const KikiSleepy = styled.div`
