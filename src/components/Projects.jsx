@@ -1,8 +1,9 @@
 import { styled } from "styled-components";
-import { Call } from "./Home";
 import Tiles from "./Tiles";
+import gameLoop from "../assets/gameLoop.gif"
 
 const Projects = () => {
+    console.log(gameLoop)
 	return (
 		<>
 			<MainContainer>
@@ -16,7 +17,14 @@ const Projects = () => {
 				</TitleTextDiv>
 			</MainContainer>
 			<SecondMainContainer>
-				<Headline>Legend of Burger - A NyanCat to the Past</Headline>
+                <div>
+                    <Headline>Legend of Burger - A NyanCat to the Past</Headline>
+                    {/* //import game gif here and put it in a rounded box */}
+                    <ImageDiv>
+                        <Image src={gameLoop}/>
+                    </ImageDiv>
+                </div>
+				
 				<Tiles />
 			</SecondMainContainer>
 		</>
@@ -28,6 +36,18 @@ const GreenSpan = styled.span`
     color: var(--primary-color);
     padding: 5px 10px;
     font-weight: bold;
+`;
+
+const Image = styled.img`
+    width: 400px;
+
+`;
+
+const ImageDiv = styled.div`
+    margin: 10px auto;
+	border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
 `;
 
 const MainContainer = styled.div`
