@@ -3,7 +3,7 @@ import Tiles from "./Tiles";
 import gameLoop from "../assets/gameLoop.gif"
 
 const Projects = () => {
-    console.log(gameLoop)
+
 	return (
 		<>
 			<MainContainer>
@@ -19,7 +19,6 @@ const Projects = () => {
 			<SecondMainContainer>
                 <div>
                     <Headline>Legend of Burger - A NyanCat to the Past</Headline>
-                    {/* //import game gif here and put it in a rounded box */}
                     <ImageDiv>
                         <Image src={gameLoop}/>
                     </ImageDiv>
