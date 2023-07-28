@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { aboutMeTile } from "../assets/projectData";
 import Tiles from "./Tiles";
-import picture from "../assets/picture.jpg";
+import myEditedPicture from "../assets/myEditedPicture.jpg";
 
 const About = () => {
 
@@ -37,7 +37,7 @@ const About = () => {
 						Marjolaine Feale, aspiring Web Developer
 					</Headline>
 					<ImageDiv>
-						<Image src={picture} />
+						<Image src={myEditedPicture} />
 					</ImageDiv>
 				</ImageTitleWrapper>
 				<Tiles gridConfig={gridConfig} tileData={aboutMeTile} />
@@ -54,7 +54,7 @@ const GreenSpan = styled.span`
 `;
 
 const Image = styled.img`
-	max-width: 400px;
+	max-width: 350px;  
 `;
 
 const ImageDiv = styled.div`
