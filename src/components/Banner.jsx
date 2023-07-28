@@ -9,7 +9,7 @@ const Banner = () => {
             <BrandHeading>Marjolaine Feale</BrandHeading>
             <NavBar className="nav-buttons">
                 <NavButtons to={"/"} >Home</NavButtons>
-                <NavButtons>About</NavButtons>
+                <NavButtons to={"/about"} >About</NavButtons>
                 <NavButtons to={"/projects"} >Projects</NavButtons>
                 <NavButtons>Contact</NavButtons>
             </NavBar>

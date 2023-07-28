@@ -3,6 +3,7 @@ import GlobalStyles from "./GlobalStyles";
 import Home from "./Home";
 import Projects from "./Projects";
 import Banner from "./Banner";
+import About from "./About";
 
 const App = () => {
 	return (
@@ -12,6 +13,7 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/projects" element={<Projects />} />
+        <Route path="/about" element={ <About />} />
         
 			</Routes>
 		</Router>
