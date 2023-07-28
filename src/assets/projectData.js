@@ -1,3 +1,32 @@
+export const aboutMeTile = [
+	{
+		id: "tile1",
+		title: "Section 1",
+		isColorSwap: false,
+		additionalText: [
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque viverra mauris in aliquam sem."
+		]
+	},
+	{
+		id: "tile2",
+		title: "Section 2",
+		isColorSwap: true,
+		additionalText: [
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque viverra mauris in aliquam sem."
+		]
+	},
+	{
+		id: "tile3",
+		title: "Section 3",
+		isColorSwap: true,
+		additionalText: [
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque viverra mauris in aliquam sem.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+		]
+	}
+]
+
 
 export const tilesNyanCat = [
 	{   
