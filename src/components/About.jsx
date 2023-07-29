@@ -153,6 +153,7 @@ const Image = styled.img`
 	flex: 1 1 0;
 	width: 350px;
 	max-width: 80%;
+    border-radius: 5px;
     @media screen and (max-width: 769px) {
 		max-width: 50%;
         min-width: 200px;
