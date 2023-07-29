@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { styled } from "styled-components";
-
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.svg";
+import mail from "../assets/mail.svg";
 const Contact = () => {
 	const [formData, setFormData] = useState({
 		name: "",
@@ -41,17 +43,17 @@ const Contact = () => {
 					</ImageTitleWrapper>
 					{!isDisplayed && (
 						<MessageDiv>
-							<SubmitText>
+							<TileText>
 								Hi {formData.name} ! Nice to meet you !
-							</SubmitText>
-							<SubmitText>
+							</TileText>
+							<TileText>
 								I'm always happy to meet a {formData.interest}.
-							</SubmitText>
-							<SubmitText>
+							</TileText>
+							<TileText>
 								I will contact you shortly by email at{" "}
 								{formData.email} so we can discuss your message.
-							</SubmitText>
-							<SubmitText>"{formData.message}"</SubmitText>
+							</TileText>
+							<TileText>"{formData.message}"</TileText>
 						</MessageDiv>
 					)}
 				</LeftDiv>
@@ -87,7 +89,7 @@ const Contact = () => {
 										});
 									}}
 								/>
-								<Label htmlFor="interest">You are a...</Label>
+								<Label htmlFor="interest">You are ...</Label>
 								<Select
 									required
 									id="interest"
@@ -99,10 +101,10 @@ const Contact = () => {
 										});
 									}}
 								>
-									<Option value="fellow web developer">
-										Fellow Web developer
+									<Option value="fellow Web developer">
+										a Web developer
 									</Option>
-									<Option value="recruiter">Recruiter</Option>
+									<Option value="recruiter">a Recruiter</Option>
 									<Option value="curious person">
 										Curious
 									</Option>
@@ -131,14 +133,53 @@ const Contact = () => {
 							</ButtonDiv>
 						</form>
 					</FormDiv>
-					<PersonalLinkDiv>
+					<PersonalLinksDiv>
 						<TileTitle>Contact me elsewhere</TileTitle>
-					</PersonalLinkDiv>
+						<LinkDiv>
+							<Mail src={mail} />
+							<InlineTileText>
+								marjolainefeale@gmail.com
+							</InlineTileText>
+						</LinkDiv>
+						<LinkDiv>
+							<LinkedIn src={linkedin} />
+							<InlineTileText>LinkedIn</InlineTileText>
+						</LinkDiv>
+						<LinkDiv>
+							<Github src={github} />
+							<InlineTileText>GitHub</InlineTileText>
+						</LinkDiv>
+					</PersonalLinksDiv>
 				</RightDiv>
 			</SecondMainContainer>
 		</>
 	);
 };
+
+const LinkDiv = styled.div`
+  margin: 28px 0 -8px 70px;
+  text-align: start;
+`;
+
+const Mail = styled.img`
+	height: 19px;
+	width: 21px;
+	position: relative;
+	top: 4px;
+	/* left: 1px; */
+`;
+
+const Github = styled.img`
+	width: 22px;
+	position: relative;
+	top: 3px;
+`;
+
+const LinkedIn = styled.img`
+	width: 22px;
+	position: relative;
+	top: 4px;
+`;
 
 const MainContainer = styled.div`
 	width: 100vw;
@@ -178,11 +219,12 @@ const SecondMainContainer = styled(MainContainer)`
 	background-color: var(--primary-color);
 	height: 100vh; // was 100vh before
 	max-width: 100%;
-
+  position: relative;
 `;
 
 const LeftDiv = styled.div`
-min-width: 40%;`;
+	min-width: 40%;
+`;
 
 const ImageTitleWrapper = styled.div`
 	min-width: 40%;
@@ -197,9 +239,13 @@ const MessageDiv = styled.div`
 	top: 770px; */
 	border-radius: 5px;
 	padding: 20px 10px;
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    left: 8%; // transition has to make it go from -25% to 8%
 `;
 
-const SubmitText = styled.p`
+const TileText = styled.p`
 	color: var(--tertiary-color);
 	font-family: var(--copy-font-family);
 	font-size: 20px;
@@ -209,19 +255,19 @@ const SubmitText = styled.p`
 `;
 
 const RightDiv = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas:
-  " tile1 tile1 tile1 tile1 ."
-  " tile1 tile1 tile1 tile1 ."
-  " tile1 tile1 tile1 tile1 ."
-  " . tile2 tile2 tile2 tile2"
-  " . tile2 tile2 tile2 tile2";
-  grid-column-gap: 10px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-areas:
+		" tile1 tile1 tile1 tile1 ."
+		" tile1 tile1 tile1 tile1 ."
+		" tile1 tile1 tile1 tile1 ."
+		" . tile2 tile2 tile2 tile2"
+		" . tile2 tile2 tile2 tile2";
+	grid-column-gap: 10px;
 	grid-row-gap: 10px;
-  margin: 10px 0;
-  min-width: 60%;
+	margin: 10px 0;
+	min-width: 60%;
 `;
 
 const FormDiv = styled.div`
@@ -339,11 +385,19 @@ const SubmitButton = styled.button`
 	}
 `;
 
-const PersonalLinkDiv = styled.div`
+const PersonalLinksDiv = styled.div`
 	grid-area: tile2;
-  padding: 10px;
+	padding: 10px;
 	border-radius: 5px;
-  background-color: var(--secondary-color);
+	background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+
+`;
+
+const InlineTileText = styled(TileText)`
+	display: inline;
+  text-align: end;
 `;
 
 export default Contact;
