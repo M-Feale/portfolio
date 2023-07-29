@@ -11,7 +11,7 @@ const Banner = () => {
                 <NavButtons to={"/"} >Home</NavButtons>
                 <NavButtons to={"/about"} >About</NavButtons>
                 <NavButtons to={"/projects"} >Projects</NavButtons>
-                <NavButtons>Contact</NavButtons>
+                <NavButtons to={"/contact"} >Contact</NavButtons>
             </NavBar>
         </MainContainer>
         
