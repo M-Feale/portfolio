@@ -4,8 +4,7 @@ import Tiles from "./Tiles";
 import myEditedPicture from "../assets/myEditedPicture.jpg";
 
 const About = () => {
-
-    const gridConfig = {
+	const gridConfig = {
 		rows: 5,
 		columns: 6,
 		gridTemplateAreas: `" . . tile1 tile1 tile1 . "
@@ -54,7 +53,7 @@ const GreenSpan = styled.span`
 `;
 
 const Image = styled.img`
-	max-width: 350px;  
+	max-width: 350px;
 `;
 
 const ImageDiv = styled.div`
@@ -65,7 +64,7 @@ const ImageDiv = styled.div`
 `;
 
 const ImageTitleWrapper = styled.div`
-    min-width: 40%;
+	min-width: 40%;
 `;
 
 const MainContainer = styled.div`
@@ -106,6 +105,5 @@ const SecondMainContainer = styled(MainContainer)`
 	background-color: var(--primary-color);
 	height: 100vh;
 `;
-
 
 export default About;
