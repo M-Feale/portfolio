@@ -77,6 +77,7 @@ const MainContainer = styled.div`
 	background-color: var(--secondary-color);
 	display: flex;
 `;
+
 const TitleTextDiv = styled.div`
 	width: 50%;
 	left: 25%;
