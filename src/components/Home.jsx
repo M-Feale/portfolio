@@ -8,17 +8,19 @@ const Home = () => {
 				<TextDiv>
 					<Call>Making strides in the web development world...</Call>
 					<Answer>One project at a time</Answer>
-					<Connection to="/contact" >Let's connect <LeftSpan>--{">"}</LeftSpan></Connection>
-				</TextDiv> 
+					<Connection to="/contact">
+						Let's connect <LeftSpan>--{">"}</LeftSpan>
+					</Connection>
+				</TextDiv>
 			</MainContainer>
 		</>
 	);
 };
 
 const LeftSpan = styled.span`
-  text-align: end;
-  position: relative;
-  left: 8%;
+	text-align: end;
+	position: relative;
+	left: 8%;
 `;
 
 const MainContainer = styled.div`
@@ -51,14 +53,22 @@ const TextDiv = styled.div`
 	padding: 0 50px;
 	background-color: var(--primary-color);
 	margin: 0 auto;
+
+  @media screen and (max-width: 426px) {
+		width: 130px;
+	}
 `;
 
-export const Call = styled.p`
+const Call = styled.p`
 	font-size: 70px;
 	font-weight: var(--heading-font-weight);
 	color: var(--tertiary-color);
 	font-family: var(--heading-font-family);
-  text-align: end;
+	text-align: end;
+
+	@media screen and (max-width: 426px) {
+		font-size: 40px;
+	}
 	/* font-family: 'JetBrains Mono', monospace; */
 	/* font-family: 'Archivo', sans-serif; */
 	/* font-family: 'Archivo Black', sans-serif;  */
@@ -73,21 +83,33 @@ export const Answer = styled.p`
 	width: 200px;
 	position: relative;
 	/* top: 10px; */
-  text-align: start;
+	text-align: start;
+
+  @media screen and (max-width: 426px) {
+		width: 130px;
+    font-size: 24px;
+    left: -150%;
+	}
 `;
 
 const Connection = styled(Link)`
-	font-size: 3cap;
+	font-size: 16px;
 	left: 90%;
 	width: 200px;
 	position: relative;
 	top: -20px;
 	color: var(--secondary-color);
-  background-color: var(--tertiary-color);
+	background-color: var(--tertiary-color);
 	font-family: var(--link-font-family);
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+
+  @media screen and (max-width: 426px) {
+		width: 155px;
+    font-size: 12px;
+    left: 250%;
+	}
 `;
 
 // const KikiSleepy = styled.div`
