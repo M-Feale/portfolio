@@ -105,6 +105,7 @@ const SecondMainContainer = styled.div`
 	padding: 0 10px;
 	@media screen and (max-width: 769px) {
 		flex-direction: column;
+        height: 100%;
 	}
 `;
 
