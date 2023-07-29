@@ -9,7 +9,7 @@ const Tiles = ({ gridConfig, tileData }) => {
 						<Tile
 							key={tile.id}
 							$tileGridId={tile.id}
-							$isColorSwap={tile.isColorSwap}
+							$isColorSwapped={tile.isColorSwapped}
 						>
 							<TileTitle>{tile.title}</TileTitle>
 							{tile.additionalText.map(
@@ -17,7 +17,7 @@ const Tiles = ({ gridConfig, tileData }) => {
 									return (
 										<TileText
 											key={additionalText[0] + index}
-											$isColorSwap={tile.isColorSwap}
+											$isColorSwapped={tile.isColorSwapped}
 										>
 											{additionalText}
 										</TileText>
@@ -35,8 +35,7 @@ const Tiles = ({ gridConfig, tileData }) => {
 const Wrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-  align-items: center;
-
+	align-items: center;
 `;
 
 const MainContainer = styled.div`
@@ -54,29 +53,33 @@ const MainContainer = styled.div`
 	grid-row-gap: 10px;
 	margin: 10px 0;
 	min-width: 100%;
-  align-items: flex-start;
-  @media screen and (max-width: 426px) {
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: column;
+	align-items: flex-start;
+	@media screen and (max-width: 426px) {
+		flex-wrap: wrap;
+		display: flex;
+		flex-direction: column;
 	}
 `;
 
 const Tile = styled.div`
 	grid-area: ${(props) => props.$tileGridId};
 	background-color: ${(props) =>
-		props.$isColorSwap
+		props.$isColorSwapped
 			? "var(--secondary-color)"
 			: "var(--tertiary-color)"}; //var(--secondary-color); //var(--tertiary-color);
 	padding: 10px;
 	border-radius: 5px;
+
+	@media screen and (max-width: 426px) {
+		width: 100%;
+	}
 `;
 
 const TileTitle = styled.p`
 	font-family: var(--heading-font-family);
 	color: var(--tertiary-color);
 	/* ${(props) =>
-		props.$isColorSwap
+		props.$isColorSwapped
 			? "var(--secondary-color)"
 			: "var(--tertiary-color)"}; //var(--secondary-color); //var(--tertiary-color); */
 	background-color: var(--primary-color);
@@ -89,7 +92,7 @@ const TileText = styled.p`
 	margin: 15px 0;
 	line-height: 125%;
 	color: ${(props) =>
-		props.$isColorSwap
+		props.$isColorSwapped
 			? "var(--tertiary-color)"
 			: "var(--secondary-color)"}; //var(--tertiary-color); //var(--secondary-color);
 	text-align: justify;
