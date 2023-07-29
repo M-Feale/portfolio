@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 const Home = () => {
@@ -7,8 +8,8 @@ const Home = () => {
 				<TextDiv>
 					<Call>Making strides in the web development world...</Call>
 					<Answer>One project at a time</Answer>
-					<Connection>Let's connect <LeftSpan>--{">"}</LeftSpan></Connection>
-				</TextDiv>
+					<Connection to="/contact" >Let's connect <LeftSpan>--{">"}</LeftSpan></Connection>
+				</TextDiv> 
 			</MainContainer>
 		</>
 	);
@@ -75,7 +76,7 @@ export const Answer = styled.p`
   text-align: start;
 `;
 
-const Connection = styled.p`
+const Connection = styled(Link)`
 	font-size: 3cap;
 	left: 90%;
 	width: 200px;
@@ -86,6 +87,7 @@ const Connection = styled.p`
 	font-family: var(--link-font-family);
   padding: 5px;
   text-align: center;
+  text-decoration: none;
 `;
 
 // const KikiSleepy = styled.div`
