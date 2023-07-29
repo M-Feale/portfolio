@@ -19,6 +19,7 @@ const Banner = () => {
 };
 
 const MainContainer = styled.div`
+    margin: 0 auto;
     height: 15vh;
     width: 100vw;
     max-width: 100%;
@@ -30,6 +31,10 @@ const MainContainer = styled.div`
     z-index: 1;
     color: var(--tertiary-color);
     padding: 0 10px;
+    @media screen and (max-width: 426px){
+        flex-direction: column;
+        justify-content: space-around;
+    }
 `;
 
 const NavBar = styled.div`
@@ -48,6 +53,9 @@ const NavButtons = styled(Link)`
     font-family: var(--link-font-family);
     text-decoration: none;
     color: var(--tertiary-color);
+    @media screen and (max-width: 426px){
+        font-size: 16px;
+    }
 `;
 
 export default Banner;
