@@ -1,5 +1,3 @@
-# React + Vite
-
 # Portfolio
 
 My portfolio is, as the name suggests, a web page showcasing my skills and interests as an upcoming full-stack web developer. 
@@ -26,7 +24,7 @@ As I really love Hayao Miyazaki movies, I looked through palettes matching his w
 
 Then, I researched design fundamentals to get up to speed with the best practices around choosing colors and fonts.
 
-Finally, I spent some time brainstorming to refine my brand and its message and once that was done, I knew where I was going with the visual identity of my portfolio.
+Finally, I spent some time brainstorming to refine my brand and its message. I narrowed down my design choices and tried a few of them on the page with a Banner and a Home component. I limited my design choices further to only 3 fonts and 3 colors that I would use wisely throughout my portfolio (in accordance with the design principles I had researched) and once that was done, I knew where I was going with the visual identity of my website.
 
 ### Implementation
 
@@ -36,6 +34,8 @@ That allowed me to plan ahead the coding structure of my own portfolio which jum
 Afterwards, I looked again through the provided requirements for the project and highlighted the different sections I needed to implement for my minimal viable product (MVP). I also took note of my personal bonus requirements for the project, features I absolutely wanted to add which were an animated landing page and a cohesive design and visual identity.
 
 What was left to do was to start coding!
+
+I started by quickly putting together a first version of a Banner and Home component to test out fonts and colors in and then made my way through the MVP requirement list one component at a time.
 
 ## Disclaimer
 
