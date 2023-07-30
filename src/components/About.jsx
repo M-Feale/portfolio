@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import { aboutMeTile } from "../assets/projectData";
+import { aboutMeTile } from "../assets/data/projectData"; 
 import Tiles from "./Tiles";
-import myEditedPicture from "../assets/myEditedPicture.jpg";
+import myEditedPicture from "../assets/images/myEditedPicture.jpg";
 
 const About = () => {
 	const gridConfig = {
@@ -20,13 +20,13 @@ const About = () => {
 				<TitleTextDiv>
 					<Headline>About</Headline>
 					<Tagline>
-						Learning something new at every opportunity.
+						Graduating as a Full-Stack Web Developer in Fall 2023.
 					</Tagline>
 					<Tagline>
-						Pushing myself outside of my comfort zone.
+						Ready for my next adventure.
 					</Tagline>
 					<Tagline>
-						<GreenSpan>Thriving.</GreenSpan>
+						<GreenSpan>Come with me!</GreenSpan>
 					</Tagline>
 				</TitleTextDiv>
 			</MainContainer>
@@ -96,6 +96,7 @@ const GreenSpan = styled.span`
 	color: var(--primary-color);
 	padding: 5px 10px;
 	font-weight: bold;
+	line-height: 115%;
 `;
 
 const SecondMainContainer = styled.div`
