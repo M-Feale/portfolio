@@ -1,15 +1,14 @@
 import { styled } from "styled-components";
 
 const Upcoming = () => {
-    return(
-        <MainContainer>
-        <TextDiv>
-            <Call>On the way...</Call>
-            <Answer>Working hard to implement this new feature.</Answer>
-        </TextDiv>
-    </MainContainer>
-    )
-}
+	return (
+		<MainContainer>
+			<TextDiv>
+				<Call>On the way...</Call>
+			</TextDiv>
+		</MainContainer>
+	);
+};
 
 const MainContainer = styled.div`
 	width: 100vw;
@@ -33,7 +32,7 @@ const TextDiv = styled.div`
 	background-color: var(--primary-color);
 	margin: 0 auto;
 
-  @media screen and (max-width: 426px) {
+	@media screen and (max-width: 426px) {
 		width: 130px;
 	}
 `;
@@ -44,6 +43,8 @@ const Call = styled.p`
 	color: var(--tertiary-color);
 	font-family: var(--heading-font-family);
 	text-align: end;
+    position: relative;
+    left: 40%;
 
 	@media screen and (max-width: 426px) {
 		font-size: 40px;
@@ -57,12 +58,12 @@ export const Answer = styled.p`
 	left: -60%;
 	width: 200px;
 	position: relative;
-	text-align: start;
+	text-align: justify;
 
-  @media screen and (max-width: 426px) {
+	@media screen and (max-width: 426px) {
 		width: 130px;
-    font-size: 24px;
-    left: -150%;
+		font-size: 24px;
+		left: -150%;
 	}
 `;
 
