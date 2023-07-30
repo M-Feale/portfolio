@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 import mail from "../assets/mail.svg";
+
 const Contact = () => {
 	const [formData, setFormData] = useState({
 		name: "",
@@ -33,28 +34,30 @@ const Contact = () => {
 					<Tagline>
 						It's always a pleasure to meet new people.
 					</Tagline>
-					<Tagline>Let's chat!</Tagline>
+					<GreenTagline>Let's chat!</GreenTagline>
 				</TitleTextDiv>
 			</MainContainer>
 			<SecondMainContainer>
 				<LeftDiv>
-					<ImageTitleWrapper>
-						<Headline>Stay in touch</Headline>
-					</ImageTitleWrapper>
+					<SecondHeadline>Stay in touch</SecondHeadline>
 					{!isDisplayed && (
-						<MessageDiv>
-							<TileText>
-								Hi {formData.name} ! Nice to meet you !
-							</TileText>
-							<TileText>
-								I'm always happy to meet a {formData.interest}.
-							</TileText>
-							<TileText>
-								I will contact you shortly by email at{" "}
-								{formData.email} so we can discuss your message.
-							</TileText>
-							<TileText>"{formData.message}"</TileText>
-						</MessageDiv>
+						<MessageOuterContainer>
+							<MessageTextDiv>
+								<TileText>
+									Hi {formData.name} ! Nice to meet you !
+								</TileText>
+								<TileText>
+									I'm always happy to meet a{" "}
+									{formData.interest}.
+								</TileText>
+								<TileText>
+									I will contact you shortly by email at{" "}
+									{formData.email} so we can discuss your
+									message.
+								</TileText>
+								<TileText>"{formData.message}"</TileText>
+							</MessageTextDiv>
+						</MessageOuterContainer>
 					)}
 				</LeftDiv>
 				<RightDiv>
@@ -104,7 +107,9 @@ const Contact = () => {
 									<Option value="fellow Web developer">
 										a Web developer
 									</Option>
-									<Option value="recruiter">a Recruiter</Option>
+									<Option value="recruiter">
+										a Recruiter
+									</Option>
 									<Option value="curious person">
 										Curious
 									</Option>
@@ -156,47 +161,24 @@ const Contact = () => {
 	);
 };
 
-const LinkDiv = styled.div`
-  margin: 28px 0 -8px 70px;
-  text-align: start;
-`;
-
-const Mail = styled.img`
-	height: 19px;
-	width: 21px;
-	position: relative;
-	top: 4px;
-	/* left: 1px; */
-`;
-
-const Github = styled.img`
-	width: 22px;
-	position: relative;
-	top: 3px;
-`;
-
-const LinkedIn = styled.img`
-	width: 22px;
-	position: relative;
-	top: 4px;
-`;
-
 const MainContainer = styled.div`
 	width: 100vw;
 	max-width: 100%;
 	margin: 0 auto;
-	height: 75vh; // the logic here is that the header is 15vh so for people to KNOW that they have to scroll, I'm making it just a bit too small so next component is showing.
-	/* max-height: 100%; */
+	height: 50vh;
 	background-color: var(--secondary-color);
-	display: flex;
+	position: relative;
+	padding: 0 10px;
 `;
 
 const TitleTextDiv = styled.div`
 	width: 50%;
 	left: 25%;
 	top: 25%;
-	position: relative;
-	z-index: 1;
+	position: absolute;
+	@media screen and (max-width: 426px) {
+		top: 18%;
+	}
 `;
 
 const Headline = styled.p`
@@ -204,6 +186,11 @@ const Headline = styled.p`
 	font-weight: var(--heading-font-weight);
 	color: var(--tertiary-color);
 	font-family: var(--heading-font-family);
+	@media screen and (max-width: 426px) {
+		font-size: 40px;
+		position: relative;
+		left: -5%;
+	}
 `;
 
 const Tagline = styled.p`
@@ -213,36 +200,90 @@ const Tagline = styled.p`
 	position: relative;
 	margin: 18px 0;
 	text-align: center;
+	@media screen and (max-width: 426px) {
+		font-size: 24px;
+		position: relative;
+		left: 5%;
+	}
 `;
 
-const SecondMainContainer = styled(MainContainer)`
+const GreenTagline = styled(Tagline)`
+	background-color: var(--tertiary-color);
+	color: var(--primary-color);
+	padding: 5px 10px;
+	font-weight: bold;
+	display: inline;
+	left: 80%;
+	@media screen and (max-width: 426px) {
+		left: 50%;
+	}
+`;
+
+const SecondMainContainer = styled.div`
+	display: flex;
 	background-color: var(--primary-color);
-	height: 100vh; // was 100vh before
-	max-width: 100%;
-  position: relative;
+	height: 70vh;
+	padding: 0 10px;
+	@media screen and (max-width: 769px) {
+		flex-direction: column;
+		height: 100%;
+	}
 `;
 
 const LeftDiv = styled.div`
 	min-width: 40%;
+	display: flex;
+	flex-direction: column;
+	@media screen and (max-width: 769px) {
+		flex-direction: row;
+	}
+	@media screen and (max-width: 426px) {
+		flex-direction: column;
+	}
 `;
 
-const ImageTitleWrapper = styled.div`
-	min-width: 40%;
+const SecondHeadline = styled.p`
+	font-size: 70px;
+	font-weight: var(--heading-font-weight);
+	color: var(--tertiary-color);
+	font-family: var(--heading-font-family);
+
+	@media screen and (max-width: 769px) {
+		font-size: 50px;
+		max-width: 60%;
+	}
+	@media screen and (max-width: 426px) {
+		font-size: 28px;
+		max-width: 100%;
+		text-align: center;
+	}
 `;
 
-const MessageDiv = styled.div`
+const MessageOuterContainer = styled.div`
+	margin: 10px auto;
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+`;
+
+const MessageTextDiv = styled.div`
 	width: 350px;
 	height: 350px;
 	background-color: var(--secondary-color);
-	/* position: absolute; // I changed the structure of my section so the positioning is wrong. I'll change it later.
-	left: 0px;
-	top: 770px; */
 	border-radius: 5px;
-	padding: 20px 10px;
-    display: inline-block;
-    position: absolute;
-    top: 25%;
-    left: 8%; // transition has to make it go from -25% to 8%
+	padding: 10px;
+	overflow: auto;
+	@media screen and (max-width: 769px) {
+		min-width: 280px;
+		max-height: 280px;
+	}
+
+	@media screen and (max-width: 426px) {
+		min-width: 280px;
+		max-height: 210px;
+	}
 `;
 
 const TileText = styled.p`
@@ -252,6 +293,13 @@ const TileText = styled.p`
 	text-align: justify;
 	padding: 10px 5px;
 	line-height: 115%;
+
+	@media screen and (max-width: 769px) {
+		font-size: 18px;
+	}
+	@media screen and (max-width: 426px) {
+		font-size: 16px;
+	}
 `;
 
 const RightDiv = styled.div`
@@ -268,6 +316,12 @@ const RightDiv = styled.div`
 	grid-row-gap: 10px;
 	margin: 10px 0;
 	min-width: 60%;
+	align-items: flex-start;
+	@media screen and (max-width: 426px) {
+		flex-wrap: wrap;
+		display: flex;
+		flex-direction: column;
+	}
 `;
 
 const FormDiv = styled.div`
@@ -277,6 +331,9 @@ const FormDiv = styled.div`
 	background-color: var(--tertiary-color);
 	padding: 10px;
 	border-radius: 5px;
+	@media screen and (max-width: 426px) {
+		width: 100%;
+	}
 `;
 
 const TileTitle = styled.p`
@@ -307,6 +364,10 @@ const Label = styled.label`
 	font-size: 18px;
 	color: var(--secondary-color);
 	text-align: center;
+	@media screen and (max-width: 426px) {
+		font-size: 16px;
+		margin: 0;
+	}
 `;
 
 const InputField = styled.input`
@@ -383,6 +444,9 @@ const SubmitButton = styled.button`
 		color: var(--tertiary-color);
 		background-color: var(--primary-color);
 	}
+	@media screen and (max-width: 769px) {
+		font-size: 18px;
+	}
 `;
 
 const PersonalLinksDiv = styled.div`
@@ -390,14 +454,43 @@ const PersonalLinksDiv = styled.div`
 	padding: 10px;
 	border-radius: 5px;
 	background-color: var(--secondary-color);
-  display: flex;
-  flex-direction: column;
-
+	display: flex;
+	flex-direction: column;
+	@media screen and (max-width: 426px) {
+		width: 100%;
+	}
 `;
 
 const InlineTileText = styled(TileText)`
+	margin: 10px 0;
 	display: inline;
-  text-align: end;
+	text-align: end;
+	font-family: var(--link-font-family);
+`;
+
+const LinkDiv = styled.div`
+	text-align: start;
+	margin: 10px 0;
+`;
+
+const Mail = styled.img`
+	height: 19px;
+	width: 21px;
+	position: relative;
+	top: 4px;
+	/* left: 1px; */
+`;
+
+const Github = styled.img`
+	width: 22px;
+	position: relative;
+	top: 3px;
+`;
+
+const LinkedIn = styled.img`
+	width: 22px;
+	position: relative;
+	top: 4px;
 `;
 
 export default Contact;
