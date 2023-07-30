@@ -17,7 +17,9 @@ const Tiles = ({ gridConfig, tileData }) => {
 									return (
 										<TileText
 											key={additionalText[0] + index}
-											$isColorSwapped={tile.isColorSwapped}
+											$isColorSwapped={
+												tile.isColorSwapped
+											}
 										>
 											{additionalText}
 										</TileText>
@@ -49,7 +51,7 @@ const MainContainer = styled.div`
 		minmax(0, 1fr)
 	);
 	grid-template-areas: ${(props) => props.$gridConfig.gridTemplateAreas};
-  gap: 20px;
+	gap: 20px;
 	margin: 10px 0;
 	min-width: 100%;
 	align-items: flex-start;
@@ -65,7 +67,7 @@ const Tile = styled.div`
 	background-color: ${(props) =>
 		props.$isColorSwapped
 			? "var(--secondary-color)"
-			: "var(--tertiary-color)"}; //var(--secondary-color); //var(--tertiary-color);
+			: "var(--tertiary-color)"};
 	padding: 10px;
 	border-radius: 5px;
 
@@ -77,10 +79,6 @@ const Tile = styled.div`
 const TileTitle = styled.p`
 	font-family: var(--heading-font-family);
 	color: var(--tertiary-color);
-	/* ${(props) =>
-		props.$isColorSwapped
-			? "var(--secondary-color)"
-			: "var(--tertiary-color)"}; //var(--secondary-color); //var(--tertiary-color); */
 	background-color: var(--primary-color);
 	font-size: 30px;
 	margin: 15px 0;
@@ -93,7 +91,7 @@ const TileText = styled.p`
 	color: ${(props) =>
 		props.$isColorSwapped
 			? "var(--tertiary-color)"
-			: "var(--secondary-color)"}; //var(--tertiary-color); //var(--secondary-color);
+			: "var(--secondary-color)"};
 	text-align: justify;
 `;
 
