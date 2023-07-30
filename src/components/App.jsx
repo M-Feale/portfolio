@@ -5,18 +5,19 @@ import Projects from "./Projects";
 import Banner from "./Banner";
 import About from "./About";
 import Contact from "./Contact";
+import Upcoming from "./Upcoming";
 
 const App = () => {
 	return (
 		<Router>
 			<GlobalStyles />
-      <Banner />
+			<Banner />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={ <About />} />
-        <Route path="/contact" element={ <Contact />} />
-        
+				<Route path="/about" element={<About />} />
+				<Route path="/contact" element={<Contact />} />
+				<Route path="/upcoming" element={ <Upcoming /> } />
 			</Routes>
 		</Router>
 	);
