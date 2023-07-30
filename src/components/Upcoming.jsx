@@ -13,7 +13,7 @@ const Upcoming = () => {
 const MainContainer = styled.div`
 	width: 100vw;
 	margin: 0 auto;
-	height: 85vh; // the logic here is that the header is 15vh so to make the page 100vh, I need to substract the two.
+	height: 85vh;
 	background-color: var(--secondary-color);
 	position: relative;
 	display: flex;
@@ -48,22 +48,6 @@ const Call = styled.p`
 
 	@media screen and (max-width: 426px) {
 		font-size: 40px;
-	}
-`;
-
-export const Answer = styled.p`
-	font-size: 35px;
-	color: var(--tertiary-color);
-	font-family: var(--copy-font-family);
-	left: -60%;
-	width: 200px;
-	position: relative;
-	text-align: justify;
-
-	@media screen and (max-width: 426px) {
-		width: 130px;
-		font-size: 24px;
-		left: -150%;
 	}
 `;
 
