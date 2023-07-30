@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { styled } from "styled-components";
+import { keyframes, styled } from "styled-components";
 import { Link } from "react-router-dom";
 
 import github from "../assets/github.svg";
@@ -17,14 +17,15 @@ const Contact = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		if (
-			formData.name !== "" &&
-			formData.email !== "" &&
-			formData.interest !== "" &&
-			formData.message !== ""
-		) {
-			setIsDisplayed(true);
-		}
+		// if (
+		// 	formData.name !== "" &&
+		// 	formData.email !== "" &&
+		// 	formData.interest !== "" &&
+		// 	formData.message !== ""
+		// ) {
+			
+		// }
+    setIsDisplayed(true);
 	};
 
 	return (
@@ -41,7 +42,7 @@ const Contact = () => {
 			<SecondMainContainer>
 				<LeftDiv>
 					<SecondHeadline>Stay in touch</SecondHeadline>
-					{!isDisplayed && (
+					{isDisplayed && (
 						<MessageOuterContainer>
 							<MessageTextDiv>
 								<TileText>
@@ -132,7 +133,7 @@ const Contact = () => {
 							<ButtonDiv>
 								<SubmitButton
 									onClick={handleSubmit}
-									type="button"
+									type="submit"
 								>
 									Submit
 								</SubmitButton>
@@ -161,6 +162,16 @@ const Contact = () => {
 		</>
 	);
 };
+
+const slideInLeft = keyframes`
+  0% {transform: translateX(-200%);}
+  100% {transform: translateX(0%);}
+`;
+
+const slideInTop = keyframes`
+  0% {transform: translateY(-300%); height: 0px;}
+  100% {transform: translateY(0%); height: 350px;}
+`;
 
 const MainContainer = styled.div`
 	width: 100vw;
@@ -224,6 +235,9 @@ const SecondMainContainer = styled.div`
 	display: flex;
 	background-color: var(--primary-color);
 	padding: 0 10px;
+  margin: 0 auto;
+  overflow: hidden;
+
 	@media screen and (max-width: 769px) {
 		flex-direction: column;
 		height: 100%;
@@ -234,6 +248,7 @@ const LeftDiv = styled.div`
 	min-width: 40%;
 	display: flex;
 	flex-direction: column;
+  position: relative;
 	@media screen and (max-width: 769px) {
 		flex-direction: row;
 	}
@@ -266,6 +281,7 @@ const MessageOuterContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+
 `;
 
 const MessageTextDiv = styled.div`
@@ -275,14 +291,21 @@ const MessageTextDiv = styled.div`
 	border-radius: 5px;
 	padding: 10px;
 	overflow: auto;
+
+  animation-name: ${slideInLeft};
+  animation-duration: 3s;
+
 	@media screen and (max-width: 769px) {
 		min-width: 280px;
 		max-height: 280px;
+    animation-name: ${slideInTop};
+    animation-duration: 3s;
 	}
 
 	@media screen and (max-width: 426px) {
 		min-width: 280px;
 		max-height: 210px;
+
 	}
 `;
 
@@ -316,6 +339,7 @@ const RightDiv = styled.div`
 	margin: 10px 0;
 	min-width: 60%;
 	align-items: flex-start;
+  position: relative;
 	@media screen and (max-width: 426px) {
 		flex-wrap: wrap;
 		display: flex;
