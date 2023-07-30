@@ -7,7 +7,7 @@ const Projects = () => {
 	const gridConfig = {
 		rows: 5,
 		columns: 8,
-		gridTemplateAreas: `" tile1 tile1 tile2 tile2 tile2 tile5 tile5 tile5 "
+		gridTemplateAreas: `" tile1 tile1 tile2 tile2 tile2 . . . "
         " tile1 tile1 tile2 tile2 tile2 tile5 tile5 tile5 "
         " tile3 tile3 tile3 . . tile5 tile5 tile5 "
         " tile3 tile3 tile3 tile4 tile4 tile4 tile4 tile4 "

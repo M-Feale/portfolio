@@ -49,8 +49,7 @@ const MainContainer = styled.div`
 		minmax(0, 1fr)
 	);
 	grid-template-areas: ${(props) => props.$gridConfig.gridTemplateAreas};
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
+  gap: 20px;
 	margin: 10px 0;
 	min-width: 100%;
 	align-items: flex-start;

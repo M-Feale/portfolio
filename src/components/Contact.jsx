@@ -222,7 +222,6 @@ const GreenTagline = styled(Tagline)`
 const SecondMainContainer = styled.div`
 	display: flex;
 	background-color: var(--primary-color);
-	height: 70vh;
 	padding: 0 10px;
 	@media screen and (max-width: 769px) {
 		flex-direction: column;
@@ -312,8 +311,7 @@ const RightDiv = styled.div`
 		" tile1 tile1 tile1 tile1 ."
 		" . tile2 tile2 tile2 tile2"
 		" . tile2 tile2 tile2 tile2";
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
+	gap: 20px;
 	margin: 10px 0;
 	min-width: 60%;
 	align-items: flex-start;
@@ -327,7 +325,6 @@ const RightDiv = styled.div`
 const FormDiv = styled.div`
 	grid-area: tile1;
 	position: relative;
-	z-index: 10;
 	background-color: var(--tertiary-color);
 	padding: 10px;
 	border-radius: 5px;
