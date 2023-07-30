@@ -1,28 +1,30 @@
 export const aboutMeTile = [
 	{
 		id: "tile1",
-		title: "Section 1",
+		title: "Credentials",
 		isColorSwapped: false,
 		additionalText: [
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque viverra mauris in aliquam sem.",
+			"MERN Stack in Fall 2023", "MongoDB, Express.js, React, Node.js",
 		],
 	},
 	{
 		id: "tile2",
-		title: "Section 2",
+		title: "Background",
 		isColorSwapped: true,
 		additionalText: [
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque viverra mauris in aliquam sem.",
+			"With my Health Science education, I have an insasiable desire for learning and understanding every facet of my different endeavours.",
+			"My academic and professional career helped me develop and hone my communication and teamwork skills.",
+			"Changing career is a challenge that I faced head on with determination and drive with the goal of working in a field where my hands-on approach and my thirst for problem-solving would find a perfect match.",
 		],
 	},
 	{
 		id: "tile3",
-		title: "Section 3",
+		title: "Hobbies",
 		isColorSwapped: false,
 		additionalText: [
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque viverra mauris in aliquam sem.",
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"As an active person, I spend my summer playing softball and switch to crosscountry skiing during the winter.",
+			"I also have a passion for knitting, reading and videogames.",
+			"With diverse interests, I embrace every experience life has to offer with a smile and fire in my heart.",
 		],
 	},
 ];
