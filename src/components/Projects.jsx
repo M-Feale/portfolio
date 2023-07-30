@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import Tiles from "./Tiles";
-import gameLoop from "../assets/gameLoop.gif";
-import { tilesNyanCat } from "../assets/projectData";
+import gameLoop from "../assets/images/gameLoop.gif";
+import { tilesNyanCat } from "../assets/data/projectData";
 
 const Projects = () => {
 	const gridConfig = {

@@ -2,9 +2,9 @@ import { useState } from "react";
 import { keyframes, styled } from "styled-components";
 import { Link } from "react-router-dom";
 
-import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.svg";
-import mail from "../assets/mail.svg";
+import github from "../assets/images/github.svg";
+import linkedin from "../assets/images/linkedin.svg";
+import mail from "../assets/images/mail.svg";
 
 const Contact = () => {
 	const [formData, setFormData] = useState({
