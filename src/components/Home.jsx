@@ -17,8 +17,6 @@ const Home = () => {
 	);
 };
 
-
-
 const MainContainer = styled.div`
 	width: 100vw;
 	margin: 0 auto;
@@ -41,7 +39,7 @@ const TextDiv = styled.div`
 	background-color: var(--primary-color);
 	margin: 0 auto;
 
-  @media screen and (max-width: 426px) {
+	@media screen and (max-width: 426px) {
 		width: 130px;
 	}
 `;
@@ -58,7 +56,7 @@ const Call = styled.p`
 	}
 `;
 
-export const Answer = styled.p`
+const Answer = styled.p`
 	font-size: 35px;
 	color: var(--tertiary-color);
 	font-family: var(--copy-font-family);
@@ -67,10 +65,10 @@ export const Answer = styled.p`
 	position: relative;
 	text-align: start;
 
-  @media screen and (max-width: 426px) {
+	@media screen and (max-width: 426px) {
 		width: 130px;
-    font-size: 24px;
-    left: -150%;
+		font-size: 24px;
+		left: -150%;
 	}
 `;
 
@@ -87,10 +85,10 @@ const Connection = styled(Link)`
 	text-align: center;
 	text-decoration: none;
 
-  @media screen and (max-width: 426px) {
+	@media screen and (max-width: 426px) {
 		width: 155px;
-    font-size: 12px;
-    left: 250%;
+		font-size: 12px;
+		left: 250%;
 	}
 `;
 

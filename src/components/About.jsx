@@ -104,7 +104,7 @@ const SecondMainContainer = styled.div`
 	padding: 0 10px;
 	@media screen and (max-width: 769px) {
 		flex-direction: column;
-        height: 100%;
+		height: 100%;
 	}
 `;
 
@@ -115,8 +115,8 @@ const ImageTitleWrapper = styled.div`
 	@media screen and (max-width: 769px) {
 		flex-direction: row;
 	}
-    @media screen and (max-width: 426px) {
-        flex-direction: column;
+	@media screen and (max-width: 426px) {
+		flex-direction: column;
 	}
 `;
 
@@ -128,12 +128,12 @@ const SecondHeadline = styled.p`
 
 	@media screen and (max-width: 769px) {
 		font-size: 50px;
-        max-width: 60%;
+		max-width: 60%;
 	}
-    @media screen and (max-width: 426px) {
+	@media screen and (max-width: 426px) {
 		font-size: 28px;
-        max-width: 100%;
-        text-align: center;
+		max-width: 100%;
+		text-align: center;
 	}
 `;
 
@@ -150,13 +150,13 @@ const Image = styled.img`
 	min-width: 300px;
 	width: 350px;
 	max-width: 80%;
-    border-radius: 5px;
-    @media screen and (max-width: 769px) {
+	border-radius: 5px;
+	@media screen and (max-width: 769px) {
 		max-width: 50%;
-        min-width: 200px;
+		min-width: 200px;
 	}
-    @media screen and (max-width: 426px) {
-        min-width: 120px;
+	@media screen and (max-width: 426px) {
+		min-width: 120px;
 	}
 `;
 
