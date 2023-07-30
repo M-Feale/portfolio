@@ -1,16 +1,21 @@
 import { useState } from "react";
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
+
 import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 import mail from "../assets/mail.svg";
 
+
 const Contact = () => {
+
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
 		interest: "",
 		message: "",
 	});
+	const [isDisplayed, setIsDisplayed] = useState(false);
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -24,7 +29,6 @@ const Contact = () => {
 		}
 	};
 
-	const [isDisplayed, setIsDisplayed] = useState(false);
 
 	return (
 		<>
@@ -140,20 +144,20 @@ const Contact = () => {
 					</FormDiv>
 					<PersonalLinksDiv>
 						<TileTitle>Contact me elsewhere</TileTitle>
-						<LinkDiv>
+						<LinkContainer>
 							<Mail src={mail} />
 							<InlineTileText>
 								marjolainefeale@gmail.com
 							</InlineTileText>
-						</LinkDiv>
-						<LinkDiv>
+						</LinkContainer>
+						<LinkContainer to={"/upcoming"}>
 							<LinkedIn src={linkedin} />
 							<InlineTileText>LinkedIn</InlineTileText>
-						</LinkDiv>
-						<LinkDiv>
+						</LinkContainer>
+						<LinkContainer to={"/redirection"} target="_blank" >
 							<Github src={github} />
 							<InlineTileText>GitHub</InlineTileText>
-						</LinkDiv>
+						</LinkContainer>
 					</PersonalLinksDiv>
 				</RightDiv>
 			</SecondMainContainer>
@@ -199,7 +203,7 @@ const Tagline = styled.p`
 	font-family: var(--copy-font-family);
 	position: relative;
 	margin: 18px 0;
-	text-align: center;
+	text-align: end;
 	@media screen and (max-width: 426px) {
 		font-size: 24px;
 		position: relative;
@@ -214,8 +218,8 @@ const GreenTagline = styled(Tagline)`
 	font-weight: bold;
 	display: inline;
 	left: 80%;
-	@media screen and (max-width: 426px) {
-		left: 50%;
+	@media screen and (max-width: 769px){
+		left: 60%;
 	}
 `;
 
@@ -338,11 +342,11 @@ const TileTitle = styled.p`
 	color: ${(props) =>
 		props.$isColorSwap
 			? "var(--secondary-color)"
-			: "var(--tertiary-color)"}; //var(--secondary-color); //var(--tertiary-color);
+			: "var(--tertiary-color)"}; 
 	background-color: ${(props) =>
 		props.$isColorSwap
 			? "var(--tertiary-color)"
-			: "var(--primary-color)"}; //var(--tertiary-color); //var(--primary-color);
+			: "var(--primary-color)"}; 
 	font-size: 30px;
 	margin: 15px 0;
 `;
@@ -436,6 +440,7 @@ const SubmitButton = styled.button`
 	background-color: var(--secondary-color);
 	color: var(--tertiary-color);
 	border-radius: 5px;
+	cursor: pointer;
 
 	&:hover {
 		color: var(--tertiary-color);
@@ -465,9 +470,10 @@ const InlineTileText = styled(TileText)`
 	font-family: var(--link-font-family);
 `;
 
-const LinkDiv = styled.div`
+const LinkContainer = styled(Link)`
 	text-align: start;
 	margin: 10px 0;
+	text-decoration: none;
 `;
 
 const Mail = styled.img`
