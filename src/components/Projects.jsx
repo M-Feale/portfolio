@@ -102,7 +102,6 @@ const GreenSpan = styled.span`
 const SecondMainContainer = styled.div`
 	display: flex;
 	background-color: var(--primary-color);
-	height: 100vh;
 	padding: 0 10px;
 	@media screen and (max-width: 769px) {
 		flex-direction: column;

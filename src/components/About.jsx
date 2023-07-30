@@ -101,7 +101,6 @@ const GreenSpan = styled.span`
 const SecondMainContainer = styled.div`
 	display: flex;
 	background-color: var(--primary-color);
-	height: 100vh;
 	padding: 0 10px;
 	@media screen and (max-width: 769px) {
 		flex-direction: column;
@@ -140,7 +139,6 @@ const SecondHeadline = styled.p`
 
 const ImageDiv = styled.div`
 	margin: 10px auto;
-	border-radius: 10px;
 	display: flex;
 	flex: 1;
 	justify-content: center;
@@ -150,7 +148,6 @@ const ImageDiv = styled.div`
 
 const Image = styled.img`
 	min-width: 300px;
-	flex: 1 1 0;
 	width: 350px;
 	max-width: 80%;
     border-radius: 5px;
