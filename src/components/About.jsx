@@ -60,7 +60,7 @@ const TitleTextDiv = styled.div`
 	left: 25%;
 	top: 25%;
 	position: absolute;
-	@media screen and (max-width: 426px) {
+	@media screen and (max-width: 769px) {
 		top: 18%;
 	}
 `;
