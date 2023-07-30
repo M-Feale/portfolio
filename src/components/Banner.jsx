@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -47,7 +47,7 @@ const BrandHeading = styled.p`
     font-weight: var(--heading-font-weight);
 `;
 
-const NavButtons = styled(Link)` 
+const NavButtons = styled(NavLink)` 
     font-size: 20px;
     margin: 0 5px;
     font-family: var(--link-font-family);
@@ -56,6 +56,13 @@ const NavButtons = styled(Link)`
     @media screen and (max-width: 426px){
         font-size: 16px;
     }
+
+    &.active{
+	color: var(--tertiary-color);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 10px;
+}	
 `;
 
 export default Banner;
