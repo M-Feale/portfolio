@@ -6,9 +6,7 @@ import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 import mail from "../assets/mail.svg";
 
-
 const Contact = () => {
-
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -28,7 +26,6 @@ const Contact = () => {
 			setIsDisplayed(true);
 		}
 	};
-
 
 	return (
 		<>
@@ -154,7 +151,7 @@ const Contact = () => {
 							<LinkedIn src={linkedin} />
 							<InlineTileText>LinkedIn</InlineTileText>
 						</LinkContainer>
-						<LinkContainer to={"/redirection"} target="_blank" >
+						<LinkContainer to={"/redirection"} target="_blank">
 							<Github src={github} />
 							<InlineTileText>GitHub</InlineTileText>
 						</LinkContainer>
@@ -218,7 +215,7 @@ const GreenTagline = styled(Tagline)`
 	font-weight: bold;
 	display: inline;
 	left: 80%;
-	@media screen and (max-width: 769px){
+	@media screen and (max-width: 769px) {
 		left: 60%;
 	}
 `;
@@ -342,11 +339,9 @@ const TileTitle = styled.p`
 	color: ${(props) =>
 		props.$isColorSwap
 			? "var(--secondary-color)"
-			: "var(--tertiary-color)"}; 
+			: "var(--tertiary-color)"};
 	background-color: ${(props) =>
-		props.$isColorSwap
-			? "var(--tertiary-color)"
-			: "var(--primary-color)"}; 
+		props.$isColorSwap ? "var(--tertiary-color)" : "var(--primary-color)"};
 	font-size: 30px;
 	margin: 15px 0;
 `;
@@ -440,11 +435,21 @@ const SubmitButton = styled.button`
 	background-color: var(--secondary-color);
 	color: var(--tertiary-color);
 	border-radius: 5px;
+	box-shadow: 5px 5px var(--primary-color);
 	cursor: pointer;
+	transition: all ease 200ms, background-color ease 500ms;
+
 
 	&:hover {
-		color: var(--tertiary-color);
 		background-color: var(--primary-color);
+		box-shadow: 5px 5px var(--secondary-color);
+	}
+
+	&:active {
+		box-shadow: none;
+		position: relative;
+		translate: 5px 5px;
+		outline: none;
 	}
 	@media screen and (max-width: 769px) {
 		font-size: 18px;
