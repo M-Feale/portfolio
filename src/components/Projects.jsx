@@ -37,7 +37,7 @@ const Projects = () => {
 						Legend of Burger - A NyanCat to the Past
 					</SecondHeadline>
 					<ImageDiv>
-						<Image src={gameLoop} />
+						<Image src={gameLoop} alt="Gif of the game with a Legend of Zelda A Link to the Past theme" />
 					</ImageDiv>
 				</ImageTitleWrapper>
 				<Tiles gridConfig={gridConfig} tileData={tilesNyanCat} />

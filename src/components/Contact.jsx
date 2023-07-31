@@ -158,17 +158,17 @@ const Contact = () => {
 					<PersonalLinksDiv>
 						<TileTitle>Contact me elsewhere</TileTitle>
 						<LinkContainer>
-							<Mail src={mail} />
+							<Mail src={mail} alt="Logo of an Envelope"/>
 							<InlineTileText>
 								marjolainefeale@gmail.com
 							</InlineTileText>
 						</LinkContainer>
 						<LinkContainer to={"/upcoming"}>
-							<LinkedIn src={linkedin} />
+							<LinkedIn src={linkedin} alt="Logo of LinkedIn"/>
 							<InlineTileText>LinkedIn</InlineTileText>
 						</LinkContainer>
 						<LinkContainer to={"/redirection"} target="_blank">
-							<Github src={github} />
+							<Github src={github} alt="Logo of GitHub"/>
 							<InlineTileText>GitHub</InlineTileText>
 						</LinkContainer>
 					</PersonalLinksDiv>

@@ -35,7 +35,7 @@ const About = () => {
 						Marjolaine Feale, aspiring Web Developer
 					</SecondHeadline>
 					<ImageDiv>
-						<Image src={myEditedPicture} />
+						<Image src={myEditedPicture} alt="Headshot of a person named Marjolaine Feale" />
 					</ImageDiv>
 				</ImageTitleWrapper>
 				<Tiles gridConfig={gridConfig} tileData={aboutMeTile} />
