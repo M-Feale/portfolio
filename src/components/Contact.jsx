@@ -14,18 +14,22 @@ const Contact = () => {
 		message: "",
 	});
 	const [isDisplayed, setIsDisplayed] = useState(false);
+	const [isFormValid, setIsFormValid] = useState(false);
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		// if (
-		// 	formData.name !== "" &&
-		// 	formData.email !== "" &&
-		// 	formData.interest !== "" &&
-		// 	formData.message !== ""
-		// ) {
-			
-		// }
-    setIsDisplayed(true);
+		if (
+			formData.name !== "" &&
+			formData.email !== "" &&
+			formData.interest !== "" &&
+			formData.message !== ""
+		) {
+			setIsDisplayed(true);
+			setIsFormValid(true);
+		} else {
+			setIsDisplayed(true);
+			setIsFormValid(false);
+		}
 	};
 
 	return (
@@ -42,7 +46,7 @@ const Contact = () => {
 			<SecondMainContainer>
 				<LeftDiv>
 					<SecondHeadline>Stay in touch</SecondHeadline>
-					{isDisplayed && (
+					{isDisplayed && isFormValid && (
 						<MessageOuterContainer>
 							<MessageTextDiv>
 								<TileText>
@@ -58,6 +62,16 @@ const Contact = () => {
 									message.
 								</TileText>
 								<TileText>"{formData.message}"</TileText>
+							</MessageTextDiv>
+						</MessageOuterContainer>
+					)}
+					{isDisplayed && !isFormValid && (
+						<MessageOuterContainer>
+							<MessageTextDiv>
+								<TileText>
+									Please fill every field in the form before
+									submitting.
+								</TileText>
 							</MessageTextDiv>
 						</MessageOuterContainer>
 					)}
@@ -106,7 +120,8 @@ const Contact = () => {
 										});
 									}}
 								>
-									<Option value="fellow Web developer">
+                  <Option selected disabled value="">Select one !</Option>
+									<Option value="fellow web developer">
 										a Web developer
 									</Option>
 									<Option value="recruiter">
@@ -235,8 +250,8 @@ const SecondMainContainer = styled.div`
 	display: flex;
 	background-color: var(--primary-color);
 	padding: 0 10px;
-  margin: 0 auto;
-  overflow: hidden;
+	margin: 0 auto;
+	overflow: hidden;
 
 	@media screen and (max-width: 769px) {
 		flex-direction: column;
@@ -248,7 +263,7 @@ const LeftDiv = styled.div`
 	min-width: 40%;
 	display: flex;
 	flex-direction: column;
-  position: relative;
+	position: relative;
 	@media screen and (max-width: 769px) {
 		flex-direction: row;
 	}
@@ -281,31 +296,29 @@ const MessageOuterContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-
 `;
 
 const MessageTextDiv = styled.div`
 	width: 350px;
-	height: 350px;
+	/* height: 350px; */
 	background-color: var(--secondary-color);
 	border-radius: 5px;
 	padding: 10px;
 	overflow: auto;
 
-  animation-name: ${slideInLeft};
-  animation-duration: 3s;
+	animation-name: ${slideInLeft};
+	animation-duration: 3s;
 
 	@media screen and (max-width: 769px) {
 		min-width: 280px;
 		max-height: 280px;
-    animation-name: ${slideInTop};
-    animation-duration: 3s;
+		animation-name: ${slideInTop};
+		animation-duration: 3s;
 	}
 
 	@media screen and (max-width: 426px) {
 		min-width: 280px;
 		max-height: 210px;
-
 	}
 `;
 
@@ -339,7 +352,7 @@ const RightDiv = styled.div`
 	margin: 10px 0;
 	min-width: 60%;
 	align-items: flex-start;
-  position: relative;
+	position: relative;
 	@media screen and (max-width: 426px) {
 		flex-wrap: wrap;
 		display: flex;
@@ -462,7 +475,6 @@ const SubmitButton = styled.button`
 	box-shadow: 5px 5px var(--primary-color);
 	cursor: pointer;
 	transition: all ease 200ms, background-color ease 500ms;
-
 
 	&:hover {
 		background-color: var(--primary-color);
