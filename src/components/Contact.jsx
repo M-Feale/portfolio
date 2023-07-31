@@ -120,7 +120,7 @@ const Contact = () => {
 										});
 									}}
 								>
-                  <Option selected disabled value="">Select one !</Option>
+									<Option value="select">Select one !</Option>
 									<Option value="fellow web developer">
 										a Web developer
 									</Option>
@@ -201,10 +201,10 @@ const MainContainer = styled.div`
 const TitleTextDiv = styled.div`
 	width: 50%;
 	left: 25%;
-	top: 25%;
+	top: 20%;
 	position: absolute;
 	@media screen and (max-width: 426px) {
-		top: 18%;
+		top: 16%;
 	}
 `;
 
@@ -521,7 +521,6 @@ const Mail = styled.img`
 	width: 21px;
 	position: relative;
 	top: 4px;
-	/* left: 1px; */
 `;
 
 const Github = styled.img`
