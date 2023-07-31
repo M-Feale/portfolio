@@ -4,7 +4,7 @@ const Upcoming = () => {
 	return (
 		<MainContainer>
 			<TextDiv>
-				<Call>On the way...</Call>
+				<Call>Feature on the way...</Call>
 			</TextDiv>
 		</MainContainer>
 	);
@@ -44,7 +44,7 @@ const Call = styled.p`
 	font-family: var(--heading-font-family);
 	text-align: end;
     position: relative;
-    left: 40%;
+    left: 70%;
 
 	@media screen and (max-width: 426px) {
 		font-size: 40px;
