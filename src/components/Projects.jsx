@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+
 import Tiles from "./Tiles";
 import gameLoop from "../assets/images/gameLoop.gif";
 import { tilesNyanCat } from "../assets/data/projectData";
@@ -31,7 +32,7 @@ const Projects = () => {
 				</TitleTextDiv>
 			</MainContainer>
 			<SecondMainContainer>
-            <ImageTitleWrapper>
+				<ImageTitleWrapper>
 					<SecondHeadline>
 						Legend of Burger - A NyanCat to the Past
 					</SecondHeadline>
@@ -39,7 +40,6 @@ const Projects = () => {
 						<Image src={gameLoop} />
 					</ImageDiv>
 				</ImageTitleWrapper>
-
 				<Tiles gridConfig={gridConfig} tileData={tilesNyanCat} />
 			</SecondMainContainer>
 		</>
@@ -52,7 +52,7 @@ const MainContainer = styled.div`
 	margin: 0 auto;
 	height: 75vh; // the logic here is that the header is 15vh so for people to KNOW that they have to scroll, I'm making it just a bit too small so next component is showing.
 	background-color: var(--secondary-color);
-    position: relative;
+	position: relative;
 	padding: 0 10px;
 `;
 
@@ -71,7 +71,7 @@ const Headline = styled.p`
 	font-weight: var(--heading-font-weight);
 	color: var(--tertiary-color);
 	font-family: var(--heading-font-family);
-    @media screen and (max-width: 426px) {
+	@media screen and (max-width: 426px) {
 		font-size: 40px;
 		position: relative;
 		left: -5%;
@@ -85,7 +85,7 @@ const Tagline = styled.p`
 	position: relative;
 	margin: 18px 0;
 	text-align: end;
-    @media screen and (max-width: 426px) {
+	@media screen and (max-width: 426px) {
 		font-size: 24px;
 		position: relative;
 		left: 5%;
@@ -105,7 +105,7 @@ const SecondMainContainer = styled.div`
 	padding: 0 10px;
 	@media screen and (max-width: 769px) {
 		flex-direction: column;
-        height: 100%;
+		height: 100%;
 	}
 `;
 
@@ -116,8 +116,8 @@ const ImageTitleWrapper = styled.div`
 	@media screen and (max-width: 769px) {
 		flex-direction: row;
 	}
-    @media screen and (max-width: 426px) {
-        flex-direction: column;
+	@media screen and (max-width: 426px) {
+		flex-direction: column;
 	}
 `;
 
@@ -129,12 +129,12 @@ const SecondHeadline = styled.p`
 
 	@media screen and (max-width: 769px) {
 		font-size: 50px;
-        max-width: 60%;
+		max-width: 60%;
 	}
-    @media screen and (max-width: 426px) {
+	@media screen and (max-width: 426px) {
 		font-size: 28px;
-        max-width: 100%;
-        text-align: center;
+		max-width: 100%;
+		text-align: center;
 	}
 `;
 
@@ -153,16 +153,14 @@ const Image = styled.img`
 	flex: 1 1 0;
 	width: 350px;
 	max-width: 80%;
-    border-radius: 5px;
-    @media screen and (max-width: 769px) {
+	border-radius: 5px;
+	@media screen and (max-width: 769px) {
 		max-width: 50%;
-        min-width: 200px;
+		min-width: 200px;
 	}
-    @media screen and (max-width: 426px) {
-        min-width: 120px;
+	@media screen and (max-width: 426px) {
+		min-width: 120px;
 	}
 `;
-
-
 
 export default Projects;
