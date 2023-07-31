@@ -184,8 +184,8 @@ const slideInLeft = keyframes`
 `;
 
 const slideInTop = keyframes`
-  0% {transform: translateY(-300%); height: 0px;}
-  100% {transform: translateY(0%); height: 350px;}
+  0% {transform: translateY(-300%); height: 0px;} 
+  100% {transform: translateY(0%); height: 100%;} 
 `;
 
 const MainContainer = styled.div`
@@ -300,7 +300,6 @@ const MessageOuterContainer = styled.div`
 
 const MessageTextDiv = styled.div`
 	width: 350px;
-	/* height: 350px; */
 	background-color: var(--secondary-color);
 	border-radius: 5px;
 	padding: 10px;
