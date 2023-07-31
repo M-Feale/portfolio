@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
-import { aboutMeTile } from "../assets/data/projectData"; 
+
 import Tiles from "./Tiles";
 import myEditedPicture from "../assets/images/myEditedPicture.jpg";
+import { aboutMeTile } from "../assets/data/projectData";
 
 const About = () => {
 	const gridConfig = {
@@ -22,9 +23,7 @@ const About = () => {
 					<Tagline>
 						Graduating as a Full-Stack Web Developer in Fall 2023.
 					</Tagline>
-					<Tagline>
-						Ready for my next adventure.
-					</Tagline>
+					<Tagline>Ready for my next adventure.</Tagline>
 					<Tagline>
 						<GreenSpan>Come with me!</GreenSpan>
 					</Tagline>
