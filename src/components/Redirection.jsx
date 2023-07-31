@@ -2,10 +2,9 @@ import { useEffect } from "react";
 import { styled } from "styled-components";
 
 const Redirection = () => {
-
-    useEffect(() => {
-        window.location.href = "https://github.com/M-Feale";
-    }, [])
+	useEffect(() => {
+		window.location.href = "https://github.com/M-Feale";
+	}, []);
 
 	return (
 		<MainContainer>
@@ -19,7 +18,7 @@ const Redirection = () => {
 const MainContainer = styled.div`
 	width: 100vw;
 	margin: 0 auto;
-	height: 85vh; 
+	height: 85vh;
 	background-color: var(--secondary-color);
 	position: relative;
 	display: flex;
@@ -49,7 +48,6 @@ const Call = styled.p`
 	color: var(--tertiary-color);
 	font-family: var(--heading-font-family);
 	text-align: start;
-    
 
 	@media screen and (max-width: 426px) {
 		font-size: 40px;
