@@ -40,7 +40,6 @@ const fadeIn = keyframes`
 	100% {opacity: 1;}
 `;
 
-
 const MainContainer = styled.div`
 	width: 100vw;
 	margin: 0 auto;
@@ -52,7 +51,6 @@ const MainContainer = styled.div`
 	align-items: center;
 	justify-content: space-evenly;
 	overflow: hidden;
-
 `;
 
 const TextDiv = styled.div`
