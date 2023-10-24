@@ -21,7 +21,7 @@ const About = () => {
 				<TitleTextDiv>
 					<Headline>About</Headline>
 					<Tagline>
-						Graduating as a Full-Stack Web Developer in Fall 2023.
+						Graduated as a Full-Stack Web developer in Fall 2023.
 					</Tagline>
 					<Tagline>Ready for my next adventure.</Tagline>
 					<Tagline>
@@ -32,7 +32,7 @@ const About = () => {
 			<SecondMainContainer>
 				<ImageTitleWrapper>
 					<SecondHeadline>
-						Marjolaine Feale, aspiring Web Developer
+						Marjolaine Feale, junior Full-Stack Web developer
 					</SecondHeadline>
 					<ImageDiv>
 						<Image src={myEditedPicture} alt="Headshot of a person named Marjolaine Feale" />
