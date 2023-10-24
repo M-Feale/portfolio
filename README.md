@@ -1,7 +1,7 @@
 # Portfolio
 
-My portfolio is, as the name suggests, a web page showcasing my skills and interests as an upcoming full-stack web developer. 
-It is created with React and Vite and consists of solely a front-end (as of July 2023).
+My portfolio is, as the name suggests, a web page showcasing my skills and interests as an junior full-stack web developer. 
+It is created with React and Vite and consists of solely a front-end (as of October 2023).
 
 ## Guidelines
 
@@ -10,6 +10,13 @@ The User Story that was given to us was from the point of view of a potential em
 2. Clean, professional design and a reflection of our personal brand.
 3. Offers a easy point of contact for further communications.
 4. Is accessible through different devices.
+
+## Technologies
+
+- Vite
+- React.js
+- styled-components with keyframe animations ( [Documentation](https://styled-components.com/docs) | [Repository](https://github.com/styled-components/styled-components) )
+- Google Fonts
 
 ## Thought Process 
 
@@ -37,7 +44,8 @@ What was left to do was to start coding!
 
 I started by quickly putting together a first version of the Banner and Home component to test out fonts and colors in and then made my way through the MVP requirement list one component at a time.
 
-## Disclaimer
+## Challenges
 
-This project is completed in its first iteration but is also a work in progress. I have many more ideas for new features, a better user experience and a more extensive showcase of my past (and future) projects. All that to say, visit my portfolio often, there will be new things for you to see !
-
+- Making the website responsive on all types of devices.
+- Creating reusable components for scalability (eg. adding new projects to my portfolio)
+- Implementing animations
