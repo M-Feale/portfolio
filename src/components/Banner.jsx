@@ -34,7 +34,7 @@ const MainContainer = styled.div`
 	padding: 0 10px;
 
 	animation-name: ${fadeIn};
-	animation-duration: 8s;
+	animation-duration: 6s;
 
 	@media screen and (max-width: 426px) {
 		flex-direction: column;
