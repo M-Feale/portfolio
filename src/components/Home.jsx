@@ -81,7 +81,7 @@ const Call = styled.p`
 	text-align: end;
 
 	animation-name: ${slideInRight};
-	animation-duration: 4s;
+	animation-duration: 5s;
 
 	@media screen and (max-width: 426px) {
 		font-size: 40px;
@@ -98,7 +98,7 @@ const Answer = styled.p`
 	text-align: start;
 
 	animation-name: ${slideInLeft};
-	animation-duration: 5s;
+	animation-duration: 6s;
 
 	@media screen and (max-width: 426px) {
 		width: 130px;
