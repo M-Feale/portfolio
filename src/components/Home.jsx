@@ -23,14 +23,14 @@ const slideInTop = keyframes`
 `;
 
 const slideInRight = keyframes`
-	0% {transform: translateX(300%);}
-	40% {transform: translateX(300%);}
+	0% {transform: translateX(100vw);}
+	40% {transform: translateX(100vw);}
 	100% {transform: translateX(0%);}
 `;
 
 const slideInLeft = keyframes`
-	0% {transform: translateX(-400%);}
-	40% {transform: translateX(-400%);}
+	0% {transform: translateX(-100vw);}
+	40% {transform: translateX(-100vw);}
 	100% {transform: translateX(0%);}
 `;
 
@@ -81,7 +81,7 @@ const Call = styled.p`
 	text-align: end;
 
 	animation-name: ${slideInRight};
-	animation-duration: 5s;
+	animation-duration: 4s;
 
 	@media screen and (max-width: 426px) {
 		font-size: 40px;
@@ -98,7 +98,6 @@ const Answer = styled.p`
 	text-align: start;
 
 	animation-name: ${slideInLeft};
-	animation-delay: 1s;
 	animation-duration: 5s;
 
 	@media screen and (max-width: 426px) {
