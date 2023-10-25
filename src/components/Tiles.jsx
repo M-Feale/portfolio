@@ -38,6 +38,7 @@ const Wrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	min-width: 50%;
 `;
 
 const MainContainer = styled.div`

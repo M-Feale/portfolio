@@ -147,7 +147,7 @@ const Image = styled.img`
 	min-width: 300px;
 	flex: 1 1 0;
 	width: 350px;
-	max-width: 80%;
+	max-width: 85%;
 	border-radius: 5px;
 
 	@media screen and (max-width: 769px) {
