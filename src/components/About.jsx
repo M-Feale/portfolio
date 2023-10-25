@@ -5,16 +5,6 @@ import myEditedPicture from "../assets/images/myEditedPicture.jpg";
 import { aboutMeTile } from "../assets/data/projectData";
 
 const About = () => {
-	const gridConfig = {
-		rows: 5,
-		columns: 6,
-		gridTemplateAreas: `" . . tile1 tile1 tile1 . "
-        " tile2 tile2 tile1 tile1 tile1 ."
-        " tile2 tile2 . tile3 tile3 tile3 "
-        " tile2 tile2 . tile3 tile3 tile3 "
-        " . . .tile3 tile3 tile3 "`,
-	};
-
 	return (
 		<>
 			<MainContainer>
@@ -35,10 +25,13 @@ const About = () => {
 						Marjolaine Feale, junior Full-Stack Web developer
 					</SecondHeadline>
 					<ImageDiv>
-						<Image src={myEditedPicture} alt="Headshot of a person named Marjolaine Feale" />
+						<Image
+							src={myEditedPicture}
+							alt="Headshot of a person named Marjolaine Feale"
+						/>
 					</ImageDiv>
 				</ImageTitleWrapper>
-				<Tiles gridConfig={gridConfig} tileData={aboutMeTile} />
+				<Tiles tileData={aboutMeTile} />
 			</SecondMainContainer>
 		</>
 	);
@@ -59,7 +52,9 @@ const TitleTextDiv = styled.div`
 	left: 25%;
 	top: 25%;
 	position: absolute;
+
 	@media screen and (max-width: 769px) {
+		width: 60%;
 		top: 18%;
 	}
 `;
@@ -69,6 +64,7 @@ const Headline = styled.p`
 	font-weight: var(--heading-font-weight);
 	color: var(--tertiary-color);
 	font-family: var(--heading-font-family);
+	
 	@media screen and (max-width: 426px) {
 		font-size: 40px;
 		position: relative;
@@ -83,6 +79,7 @@ const Tagline = styled.p`
 	position: relative;
 	margin: 18px 0;
 	text-align: end;
+
 	@media screen and (max-width: 426px) {
 		font-size: 24px;
 		position: relative;
@@ -102,6 +99,7 @@ const SecondMainContainer = styled.div`
 	display: flex;
 	background-color: var(--primary-color);
 	padding: 0 10px;
+
 	@media screen and (max-width: 769px) {
 		flex-direction: column;
 		height: 100%;
@@ -112,6 +110,7 @@ const ImageTitleWrapper = styled.div`
 	min-width: 40%;
 	display: flex;
 	flex-direction: column;
+
 	@media screen and (max-width: 769px) {
 		flex-direction: row;
 	}
@@ -151,6 +150,7 @@ const Image = styled.img`
 	width: 350px;
 	max-width: 80%;
 	border-radius: 5px;
+
 	@media screen and (max-width: 769px) {
 		max-width: 50%;
 		min-width: 200px;
