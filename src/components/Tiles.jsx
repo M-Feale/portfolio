@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 
-const Tiles = ({ gridConfig, tileData }) => {
+const Tiles = ({ tileData }) => {
 	return (
 		<Wrapper>
-			<MainContainer $gridConfig={gridConfig}>
+			<MainContainer>
 				{tileData.map((tile) => {
 					return (
 						<Tile
@@ -38,32 +38,20 @@ const Wrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	min-width: 50%;
 `;
 
 const MainContainer = styled.div`
-	display: grid;
-	grid-template-columns: repeat(
-		${(props) => props.$gridConfig.columns},
-		minmax(65px, 1fr)
-	);
-	grid-template-rows: repeat(
-		${(props) => props.$gridConfig.rows},
-		minmax(0, 1fr)
-	);
-	grid-template-areas: ${(props) => props.$gridConfig.gridTemplateAreas};
-	gap: 20px;
-	margin: 10px 0;
-	min-width: 100%;
-	align-items: flex-start;
-	@media screen and (max-width: 426px) {
-		flex-wrap: wrap;
-		display: flex;
-		flex-direction: column;
-	}
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 100%;
 `;
 
 const Tile = styled.div`
-	grid-area: ${(props) => props.$tileGridId};
+	flex: 1;
+	margin: 10px 0;
+
 	background-color: ${(props) =>
 		props.$isColorSwapped
 			? "var(--secondary-color)"
