@@ -29,7 +29,7 @@ export const aboutMeTile = [
 	},
 ];
 
-export const tilesNyanCat = [
+const tilesNyanCat = [
 	{
 		id: "tile1",
 		title: "Purpose",
@@ -82,11 +82,68 @@ export const tilesNyanCat = [
 	},
 ];
 
-const projectData = {
-	nyancat: {
-		projectTitle: ``,
-		tiles: tilesNyanCat,
+const tilesMyCookingManager = [
+	{
+		id: "tile1",
+		title: "Purpose",
+		isColorSwapped: true,
+		additionalText: [
+			"Showcase my ability to develop a Full-Stack application to be warranted a diploma in Full-Stack Web Development from Concordia University"
+		]
 	},
-	portfolio: [],
-	facespace: [],
-};
+	{
+		id: "tile2",
+		title: "Motivation",
+		isColorSwapped: false,
+		additionalText: [
+			"I created this project because I needed a tool to keep track of all the recipes I made in the past and allow me to save notes and other useful information about each recipe.",
+			" The goal was to streamline my cooking planning all in the same application without having to juggle my browser bookmarks, opening a dozen of similar sounding recipes in different tabs and trying to remember if I had tried each specific recipe before and if I liked them."
+		]
+	},
+	{
+		id: "tile3",
+		title: "Technologies - Back end",
+		isColorSwapped: true,
+		additionalText: [
+			" Node.js, Express.js, MongoDB, grabity package, SendGrid API "
+		]
+	},
+	{
+		id: "tile4",
+		title: "Technologies - Front end",
+		isColorSwapped: false,
+		additionalText: [
+			"Vite, React.js, Auth0, react-rating package, styled-components package, react-icons package"
+		]
+	},
+	{
+		id: "tile5",
+		title: "Challenges",
+		isColorSwapped: true,
+		additionalText: [
+			"Creating a smooth and intuitive user experience in a feature-rich application",
+			"Learning how to use the SendGrid API ",
+			"Integrating authentication with Auth0 ",
+			" Reading and updating fields in a complex data structure in MongoDB"
+		]
+	}
+]
+
+
+import gameLoop from "../images/gameLoop.gif"
+import myCookingManagerGif from "../images/myCookingManagerGif.gif"
+
+export const projectData = [
+	{
+		projectTitle: "My Cooking Manager",
+		imageSrc: myCookingManagerGif,
+		imageAlt: "Gif of a tour of an app where recipe urls are inputed and details are fetched and modified",
+		tiles: tilesMyCookingManager,
+	},
+	{
+		projectTitle: "Legend of Burger - A NyanCat to the Past",
+		imageSrc: gameLoop,
+		imageAlt: "Gif of a 2D dodging game with a Legend of Zelda: A Link to the Past theme",
+		tiles: tilesNyanCat,
+	}
+];
