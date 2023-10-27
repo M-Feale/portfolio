@@ -1,8 +1,7 @@
 import { styled } from "styled-components";
 
 import Tiles from "./Tiles";
-import gameLoop from "../assets/images/gameLoop.gif";
-import { tilesNyanCat } from "../assets/data/projectData";
+import { projectData } from "../assets/data/projectData";
 
 const Projects = () => {
 	return (
@@ -21,17 +20,24 @@ const Projects = () => {
 					</Tagline>
 				</TitleTextDiv>
 			</MainContainer>
-			<SecondMainContainer>
-				<ImageTitleWrapper>
-					<SecondHeadline>
-						Legend of Burger - A NyanCat to the Past
-					</SecondHeadline>
-					<ImageDiv>
-						<Image src={gameLoop} alt="Gif of the game with a Legend of Zelda A Link to the Past theme" />
-					</ImageDiv>
-				</ImageTitleWrapper>
-				<Tiles tileData={tilesNyanCat} />
-			</SecondMainContainer>
+			{projectData.map((project) => {
+				return (
+					<SecondMainContainer key={project.projectTitle}>
+						<ImageTitleWrapper>
+							<SecondHeadline>
+								{project.projectTitle}
+							</SecondHeadline>
+							<ImageDiv>
+								<Image
+									src={project.imageSrc}
+									alt={project.imageAlt}
+								/>
+							</ImageDiv>
+						</ImageTitleWrapper>
+						<Tiles tileData={project.tiles} />
+					</SecondMainContainer>
+				);
+			})}
 		</>
 	);
 };
@@ -96,6 +102,7 @@ const SecondMainContainer = styled.div`
 	display: flex;
 	background-color: var(--primary-color);
 	padding: 0 10px;
+	margin: 20px 0 40px;
 
 	@media screen and (max-width: 769px) {
 		flex-direction: column;
@@ -104,7 +111,7 @@ const SecondMainContainer = styled.div`
 `;
 
 const ImageTitleWrapper = styled.div`
-	min-width: 40%;
+	min-width: 50%;
 	display: flex;
 	flex-direction: column;
 
@@ -146,7 +153,7 @@ const ImageDiv = styled.div`
 const Image = styled.img`
 	min-width: 300px;
 	flex: 1 1 0;
-	width: 350px;
+	/* width: 350px; */
 	max-width: 85%;
 	border-radius: 5px;
 
