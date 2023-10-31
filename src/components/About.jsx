@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 import Tiles from "./Tiles";
-import myEditedPicture from "../assets/images/myEditedPicture.jpg";
+import candidPicture from "../assets/images/candidPicture.jpg"
 import { aboutMeTile } from "../assets/data/projectData";
 
 const About = () => {
@@ -26,7 +26,7 @@ const About = () => {
 					</SecondHeadline>
 					<ImageDiv>
 						<Image
-							src={myEditedPicture}
+							src={candidPicture}
 							alt="Headshot of a person named Marjolaine Feale"
 						/>
 					</ImageDiv>
